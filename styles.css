@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --light-Gray: hsl(0, 0%, 42%);
+    --dark-Gray: hsl(0, 0%, 7%);
+}
+
+* {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 500;
+    color: var(--dark-Gray);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    background-color: var(--White);
+    max-width: 384px;
+    border: 1px solid var(--dark-Gray);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    box-shadow: 8px 8px 0px var(--dark-Gray);
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.card-image {
+    border-radius: 0.625rem;
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.76rem;
+}
+
+.badge {
+    background-color: var(--Yellow);
+    font-size: clamp(0.875rem, 1rem, 1.125rem);
+    font-weight: 800;
+    width: 82px;
+    padding: 0.25rem 0;
+    text-align: center;
+    border-radius: 0.25rem;
+    align-self: flex-start;
+}
+
+.date {
+    font-size: clamp(0.875rem, 1vw, 1em);
+}
+
+.title {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-weight: 800;
+}
+    .title:hover {
+        color: var(--Yellow);
+        cursor: pointer;
+    }
+
+.description {
+    color: var(--light-Gray);
+    line-height: 1.5;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-avatar {
+    height: 32px;
+    width: 32px;
+}
+
+.author-name {
+    font-weight: 800;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: fixed;
+    bottom: 20px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (max-width: 375px) {
+    .card {
+        max-width: 327px;
+    }
+}
